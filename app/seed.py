@@ -18,11 +18,9 @@ with app.app_context():
     db.session.add_all(heroes)
     heropowers=[]
     for i in range(20):
+        strengths=['Weak','Strong','Average']
         m=HeroPower(
-            # name=fake.first_name(),
-            # combinations=set(),
-            # strength=set('Strong'),
-            strength=fake.text(),
+            strength=rc(strengths),
             power_id=random.randint(1,20),
             hero_id=random.randint(1,20)
 

@@ -103,8 +103,8 @@ def powers(id):
                 return response
             for attr in request.form:
                 setattr(power, attr, request.form.get(attr))
-            db.session.add(power)
-            db.session.commit()
+            # db.session.add(power)
+                db.session.commit()
 
             response_body = {
                 "description": "updated description"
